@@ -1,12 +1,16 @@
 {
-  "name": "react-ts",
+  "name": "lunchi",
   "version": "0.0.0",
-  "private": true,
+  "description": "Holycrap, I'm starvingggg!!!",
+  "private": false,
+  "repository": "https://github.com/pouncyisdead/lunchi.git",
+  "author": "Mike Pouncy <https://github.com/pouncyisdead>",
+  "license": "AGPL-3.0-or-later",
   "dependencies": {
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "experimental",
+    "react-dom": "experimental"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -16,5 +20,21 @@
   },
   "devDependencies": {
     "react-scripts-ts": "latest"
-  }
+  },
+  "keywords": [
+    "lunchi",
+    "help",
+    "find",
+    "random",
+    "bar",
+    "resaurant",
+    "breakfast",
+    "brunch",
+    "lunch",
+    "dinner",
+    "dining",
+    "meal",
+    "map",
+    "konami"
+  ]
 }

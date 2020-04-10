@@ -1,5 +1,5 @@
-import React, { Component, Fragment, lazy, Suspense } from 'react';
-import { render } from 'react-dom';
+import React, { Component, Fragment, lazy, Suspense, StrictMode } from 'react';
+import { render, createBlockingRoot } from 'react-dom';
 
 import Hello from './Hello';
 import './style.css';
@@ -29,4 +29,23 @@ class App extends Component<AppProps, AppState> {
   }
 }
 
-render(<App />, document.getElementById('root'));
+function contentLoadedCallback() {
+  console.log('ReactDOM.render-ed');
+}
+
+export default function renderReactDom() {
+  const root = document.querySelector('#root') as HTMLElement;
+  const appJsx = (
+    <Fragment>
+      <StrictMode>
+          <App />
+      </StrictMode>
+    </Fragment>
+  );
+  // render root element
+  createBlockingRoot(root).render(appJsx);
+  // Opt into Concurrent Mode.
+  contentLoadedCallback();
+}
+
+renderReactDom();
