@@ -1,8 +1,8 @@
 import React, { Component, Fragment, lazy, Suspense, StrictMode } from 'react';
 import { render, createBlockingRoot } from 'react-dom';
 
-import Hello from './Hello';
-import './style.css';
+import { Hello } from './src/component/Hello';
+import './src/style/style.css';
 
 interface AppProps { }
 interface AppState {
@@ -38,7 +38,9 @@ export default function renderReactDom() {
   const appJsx = (
     <Fragment>
       <StrictMode>
+        <Suspense fallback={<div>Loading...</div>}>
           <App />
+        </Suspense>
       </StrictMode>
     </Fragment>
   );

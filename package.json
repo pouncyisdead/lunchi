@@ -6,17 +6,17 @@
   "repository": "https://github.com/pouncyisdead/lunchi.git",
   "author": "Mike Pouncy <https://github.com/pouncyisdead>",
   "license": "AGPL-3.0-or-later",
-  "dependencies": {
-    "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.6",
-    "react": "experimental",
-    "react-dom": "experimental"
-  },
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "react": "experimental",
+    "react-dom": "experimental"
   },
   "devDependencies": {
     "react-scripts-ts": "latest"
